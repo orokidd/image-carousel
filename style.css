@@ -1,0 +1,64 @@
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+ul, li, ol {
+  list-style: none;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+img {
+  height: 80vh;
+}
+
+.nav-indicator {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: aliceblue;
+}
+
+.nav-indicator.active {
+  background-color: rgb(52, 83, 103);
+}
+
+.nav-indicator:hover {
+  cursor: pointer;
+}
