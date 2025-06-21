@@ -1,69 +1,95 @@
-/* CSS Reset */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 * {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  background-color: #f7f9fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #333;
 }
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+/* Header */
+.test {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
 }
 
-input, button, textarea, select {
-  font: inherit;
+/* Image display */
+.image-container {
+  width: 90%;
+  max-width: 600px;
+  height: 400px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
-ul, li, ol {
-  list-style: none;
-  padding-left: 0;
-}
-a {
-  text-decoration: none;
-  color: black;
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
 }
 
-body {
-  background-color: black;
-  color: white;
+button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #5c7162;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-img {
-  height: 80vh;
+button:hover {
+  background-color: #455c4c
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Indicators */
+.indicators {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
 
 .nav-indicator {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: aliceblue;
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.2s;
+  cursor: pointer;
 }
 
 .nav-indicator.active {
-  background-color: rgb(52, 83, 103);
-}
-
-.nav-indicator:hover {
-  cursor: pointer;
-  filter: brightness(80%);
-}
-
-.nav-indicator.active:hover {
-  filter: none;
+  background-color: #585858;
+  transform: scale(1.2);
+  /* box-shadow: 0 0 6px rgba(52, 152, 219, 0.6); */
 }

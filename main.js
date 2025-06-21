@@ -12,7 +12,7 @@ function showImage() {
 }
 
 (function createIndicator() {
-  const body = document.querySelector('body')
+  const dots = document.querySelector('.indicators')
   images.forEach((image, index) => {
     const indicator = document.createElement("div")
     indicator.className = "nav-indicator"
@@ -22,7 +22,7 @@ function showImage() {
       showImage();
     });
 
-    body.appendChild(indicator)
+    dots.appendChild(indicator)
   })
 })();
 
